@@ -1,14 +1,10 @@
 {{#> section}}
   {{data.name}}, {{data.label}}, {{data.picture}}, {{data.email}}, {{data.phone}},
   {{data.website}}, {{data.summary}}
-  <hr>
   {{data.location.address}}, {{data.location.postalCode}}, {{data.location.city}}, {{data.location.countryCode}}, {{data.location.region}}
-  <hr>
   {{#each data.profiles as |profile|}}
     {{profile.network}}
     {{profile.username}}
     {{profile.url}}
   {{/each}}
-
-
 {{/section}}

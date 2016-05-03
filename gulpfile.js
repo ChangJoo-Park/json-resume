@@ -11,7 +11,7 @@ var rename = require('gulp-rename');
 
 // Sass
 gulp.task('sass', function() {
-  return gulp.src('./src/styles/style.sass')
+  return gulp.src('./src/styles/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./dist/css'));
 });

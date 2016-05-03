@@ -1,7 +1,10 @@
-<section>
-  <h2 class="section-title">{{title}}</h2>
-  <div class="section-body">
-    {{> @partial-block}}
+<section class="section row">
+  <div class="col-4">
+    <h2 class="section-title">{{title}}</h2>
   </div>
-
+  <div class="col-8">
+    <div class="section-body">
+      {{> @partial-block}}
+    </div>
+  </div>
 </section>
