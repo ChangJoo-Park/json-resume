@@ -1,6 +1,5 @@
 var modal = (function(){
   var body = $("body");
-  var openModalButton = $("button[type=submit]");
   var backdrop = $(".modal-backdrop");
   var modalContainer = $(".modal-container");
   var modalConfirmButton = modalContainer.find("button.confirm");

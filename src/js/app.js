@@ -1,12 +1,13 @@
 $(function() {
   var modalContainer = $(".modal-container");
   var modalConfirmButton = modalContainer.find("button.confirm");
-  var openModalButton = $("button[type=submit]");
+  var openModalButton = $("button.openModal");
 
   openModalButton.click(function(event) {
+    var self = $(this);
     modal.open({
-      title: 'Title',
-      message: 'hi'
+      title: self.data('title'),
+      message: self.data('message')
     });
   });
 
