@@ -4,7 +4,8 @@
   "description": "Json resume with handlebars",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "serve": "node server.js"
   },
   "author": "ChangJoo Park",
   "license": "MIT",
@@ -19,5 +20,8 @@
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
     "require-dir": "^0.3.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
