@@ -27,24 +27,46 @@ body.modal-open {
 
 /* Modal */
 .modal-container.active {
-  top: 50%;
+  visibility: visible;
 }
 
 .modal-container {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: top 200ms linear;
-  transition: top 200ms linear;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  text-align: center;
   position: fixed;
   left: 50%;
-  top: -50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 50%;
   width: 80%;
   max-width: 500px;
+  height: auto;
   background: white;
   z-index: 99;
   padding: 30px;
   border-radius: 3px;
   box-shadow: 10px 10px 5px black;
 }
+
+.modal-container.modal-effect .modal-content{
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+.modal-container.active.modal-effect .modal-content{
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
