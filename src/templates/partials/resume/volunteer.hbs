@@ -1,0 +1,16 @@
+{{#> section}}
+  {{data.length}}
+  {{#each data as |volunteer|}}
+    {{volunteer.organization}}
+    {{volunteer.position}}
+    {{volunteer.website}}
+    {{volunteer.startDate}}
+    {{volunteer.endDate}}
+    {{volunteer.summary}}
+    {{#each volunteer.highlights as |highlight|}}
+      {{highlight}}
+    {{/each}}
+  {{/each}}
+{{/section}}
+
+

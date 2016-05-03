@@ -1,0 +1,8 @@
+{{#> section}}
+  {{#each data as |interest|}}
+    {{interest.name}}
+    {{#each interest.keywords as |keyword|}}
+      {{keyword}}
+    {{/each}}
+  {{/each}}
+{{/section}}

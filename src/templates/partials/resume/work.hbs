@@ -1,0 +1,13 @@
+{{#> section}}
+  {{#each data as |work|}}
+    {{work.company}}
+    {{work.position}}
+    {{work.website}}
+    {{work.startDate}}
+    {{work.endDate}}
+    {{work.summary}}
+    {{#each work.highlights as |highlight|}}
+      {{highlight}}
+    {{/each}}
+  {{/each}}
+{{/section}}

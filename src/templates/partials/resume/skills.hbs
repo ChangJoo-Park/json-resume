@@ -1,0 +1,9 @@
+{{#> section}}
+  {{#each data as |skill|}}
+    {{skill.name}}
+    {{skill.level}}
+    {{#each data as |keywords|}}
+      {{keywords}}
+    {{/each}}
+  {{/each}}
+{{/section}}

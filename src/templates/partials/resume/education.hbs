@@ -1,0 +1,13 @@
+{{#> section}}
+{{#each data as |education|}}
+    {{education.institution}}
+    {{education.area}}
+    {{education.studyType}}
+    {{education.startDate}}
+    {{education.endDate}}
+    {{education.gpa}}
+    {{#each education.courses as |course|}}
+      {{course}}
+    {{/each}}
+  {{/each}}
+ {{/section}}
