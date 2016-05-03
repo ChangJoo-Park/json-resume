@@ -2,24 +2,24 @@
 
 module.exports = {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
+    "name": "ChangJoo Park",
+    "label": "Frontend Programmer",
     "picture": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "website": "http://johndoe.com",
-    "summary": "A summary of John Doe...",
+    "email": "changjoo.park.cj@gmail.com",
+    "phone": "+49 015779830582",
+    "website": "http://changjoo-park.github.io/",
+    "summary": "Hallo! Ich bin ChangJoo Park.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Ringslebenstr. 2",
+      "postalCode": "12353",
+      "city": "Neukölln",
+      "countryCode": "DE",
+      "region": "Berlin"
     },
     "profiles": [{
       "network": "Twitter",
-      "username": "john",
-      "url": "http://twitter.com/john"
+      "username": "pcjpcj2",
+      "url": "http://twitter.com/pcjpcj2"
     }]
   },
   "work": [{
