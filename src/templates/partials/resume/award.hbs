@@ -1,8 +1,13 @@
 {{#> section}}
   {{#each data as |award|}}
-    {{award.title}}
-    {{award.date}}
-    {{award.awarder}}
-    {{award.summary}}
+    <div class="detail-item">
+      <header class="header">
+        <h3>{{award.title}}</h3>
+      </header>
+      <p class="subheader-1">{{award.awarder}}, <span class="date">{{award.date}}</span></p>
+      <div class="summary">
+        {{award.summary}}
+      </div>
+    </div>
   {{/each}}
 {{/section}}

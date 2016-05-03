@@ -1,8 +1,54 @@
 .section {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
   .section-title {
+    padding-right: 1em;
+    text-align: center;
     color: $section-title-color;
   }
   .section-body {
+    padding-left: 1em;
     color: $section-body-color;
+    border-bottom: 1px solid $black;
+    p {
+      margin-bottom: 0.5em;
+    }
+    .detail-item {
+      padding-bottom: 1em;
+
+      .header {
+        margin-bottom: 0.5em;
+      }
+
+      .subheader-1 { // Has Date but exceptionnaly
+        font-size: 0.8em;
+      }
+
+      .subheader-2 { // Website link
+        font-size: 0.8em;
+      }
+
+      .summary {
+        font-size: 0.7em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+
+      .further-info {
+        font-size: 0.8em;
+      }
+
+      .date {
+        font-size: 0.8em;
+        color: $section-item-date-color;
+      }
+
+      .references {
+        padding-left: 0.5em;
+        border-left: 3px solid $link-color;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+      }
+    }
   }
 }

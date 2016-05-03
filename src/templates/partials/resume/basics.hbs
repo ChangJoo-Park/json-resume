@@ -1,10 +1,40 @@
-{{#> section}}
-  {{data.name}}, {{data.label}}, {{data.picture}}, {{data.email}}, {{data.phone}},
-  {{data.website}}, {{data.summary}}
-  {{data.location.address}}, {{data.location.postalCode}}, {{data.location.city}}, {{data.location.countryCode}}, {{data.location.region}}
-  {{#each data.profiles as |profile|}}
-    {{profile.network}}
-    {{profile.username}}
-    {{profile.url}}
-  {{/each}}
-{{/section}}
+<div id="basic">
+  <header>
+    <h1 class="name">{{data.name}}</h1>
+    <p class="job-position">{{data.label}}</p>
+  </header>
+  <ul class="contact">
+    <li class="list-item">
+      {{#if data.email}}
+        <span><strong>Email</strong> : <a href="mailto:{{data.email}}">{{data.email}}</a> </span>
+      {{/if}}
+    </li>
+    <li class="list-item">
+      {{#if data.phone}}
+        <span><strong>Phone</strong> : {{data.phone}}</span>
+      {{/if}}
+    </li>
+    <li class="list-item">
+      {{#if data.website}}
+        <span><strong>Website</strong> : <a href="{{data.website}}" target="_blank">{{data.website}}</a></span>
+      {{/if}}
+    </li>
+    <li class="list-item">
+      <div id="socials">
+        <ul class="inline-list">
+          {{#each data.profiles as |profile|}}
+          <li>
+            <a href={{profile.url}} target="_blank">{{profile.network}} : {{profile.username}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </li>
+  </ul>
+  {{> structures/address-box location=data.location}}
+
+
+  <div id="summary">
+    {{data.summary}}
+  </div>
+</div>

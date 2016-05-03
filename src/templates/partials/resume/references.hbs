@@ -1,6 +1,11 @@
 {{#> section}}
   {{#each data as |reference|}}
-    {{reference.name}}
-    {{reference.reference}}
+    <div class="detail-item">
+      <blockquote class="references">
+        {{reference.reference}}
+        <br>
+        — <span class="referencer">{{reference.name}}</span>
+      </blockquote>
+    </div>
   {{/each}}
 {{/section}}

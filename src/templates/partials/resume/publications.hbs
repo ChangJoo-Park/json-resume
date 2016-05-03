@@ -1,9 +1,14 @@
 {{#> section}}
   {{#each data as |publication|}}
-    {{publication.name}}
-    {{publication.publisher}}
-    {{publication.releaseDate}}
-    {{publication.website}}
-    {{publication.summary}}
+    <div class="detail-item">
+      <header class="header">
+        <h3>{{publication.name}}</h3>
+      </header>
+      <p class="subheader-1">{{publication.publisher}}, <span class="date">{{publication.releaseDate}}</span></p>
+      <p class="subheader-2"><a href="{{publication.website}}" target="_blank">{{publication.website}}</a></p>
+      <div class="summary">
+        {{publication.summary}}
+      </div>
+    </div>
   {{/each}}
 {{/section}}

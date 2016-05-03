@@ -139,6 +139,7 @@ section {
   width: 100%
 }
 
+// Tablets
 @media only screen and (max-width: 768px) and (min-width: 480px) {
   /*
     Grid
@@ -184,6 +185,7 @@ section {
   }
 }
 
+// Phones
 @media only screen and (max-width: 479px) {
   /*
     Grid

@@ -1,6 +1,10 @@
 {{#> section}}
   {{#each data as |language|}}
-    {{language.name}}
-    {{language.level}}
+    <div class="detail-item">
+      <header class="header">
+        <h3>{{language.name}}</h3>
+      </header>
+      <p class="subheader-1">{{language.level}}</p>
+    </div>
   {{/each}}
 {{/section}}

@@ -1,15 +1,22 @@
 {{#> section}}
-  {{data.length}}
   {{#each data as |volunteer|}}
-    {{volunteer.organization}}
-    {{volunteer.position}}
-    {{volunteer.website}}
-    {{volunteer.startDate}}
-    {{volunteer.endDate}}
-    {{volunteer.summary}}
-    {{#each volunteer.highlights as |highlight|}}
-      {{highlight}}
-    {{/each}}
+    <div class="detail-item">
+      <header class="header">
+        <h3>{{volunteer.organization}}</h3>
+      </header>
+      <p class="subheader-1">{{volunteer.position}}, <span class="date">{{volunteer.startDate}} -{{volunteer.endDate}}</span></p>
+      <p class="subheader-2"><a href="{{volunteer.website}}" target="_blank">{{volunteer.website}}</a></p>
+      <div class="summary">
+        {{volunteer.summary}}
+      </div>
+      <div class="further-info">
+        <ul>
+        {{#each volunteer.highlights as |highlight|}}
+          <li>{{highlight}}</li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
   {{/each}}
 {{/section}}
 
