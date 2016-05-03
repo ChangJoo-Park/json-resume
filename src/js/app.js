@@ -1,6 +1,6 @@
 $(function() {
   var modalContainer = $(".modal-container");
-  var modalConfirmButton = modalContainer.find("button.confirm");
+  var modalCloseButton = modalContainer.find("button.close");
   var openModalButton = $("button.openModal");
 
   openModalButton.click(function(event) {
@@ -11,7 +11,7 @@ $(function() {
     });
   });
 
-  modalConfirmButton.click(function(event){
+  modalCloseButton.click(function(event){
     modal.close();
   });
 });

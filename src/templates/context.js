@@ -45,7 +45,7 @@ module.exports = {
     }]
   },
   "work": [{
-    "company": "Independent",
+    "company": "Independent Development",
     "position": "iOS Developer",
     "website": "http://grackerapp.github.io/",
     "startDate": "2015-12",
