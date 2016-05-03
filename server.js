@@ -3,12 +3,12 @@
 
  /* serves main page */
  app.get("/", function(req, res) {
-    res.sendfile('./dist/index.html')
+    res.sendFile(__dirname+'/dist/index.html');
  });
 
  /* serves all the static files */
  app.get(/^(.+)$/, function(req, res){
-     res.sendfile( __dirname + '/dist/'+ req.params[0]);
+     res.sendFile( __dirname + '/dist/'+ req.params[0]);
  });
 
  var port = process.env.PORT || 5000;
