@@ -6,17 +6,17 @@
   <ul class="contact">
     <li class="list-item">
       {{#if data.email}}
-        <span><strong>Email</strong> : <a href="mailto:{{data.email}}">{{data.email}}</a> </span>
+        <span><i class="icon ion-email"></i> : <a href="mailto:{{data.email}}">{{data.email}}</a> </span>
       {{/if}}
     </li>
     <li class="list-item">
       {{#if data.phone}}
-        <span><strong>Phone</strong> : {{data.phone}}</span>
+        <span><i class="icon ion-ios-telephone"></i> : {{data.phone}}</span>
       {{/if}}
     </li>
     <li class="list-item">
       {{#if data.website}}
-        <span><strong>Website</strong> : <a href="{{data.website}}" target="_blank">{{data.website}}</a></span>
+        <span><i class="icon ion-home"></i> : <a href="{{data.website}}" target="_blank">{{data.website}}</a></span>
       {{/if}}
     </li>
     <li class="list-item">
@@ -24,7 +24,9 @@
         <ul class="inline-list">
           {{#each data.profiles as |profile|}}
           <li>
-            <a href={{profile.url}} target="_blank">{{profile.network}} : {{profile.username}}</a>
+            <a href={{profile.url}} target="_blank" title={{profile.username}}>
+              {{socialIcon profile.network}}
+            </a>
           </li>
           {{/each}}
         </ul>

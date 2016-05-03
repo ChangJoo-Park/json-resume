@@ -6,9 +6,9 @@
       </header>
       <p class="subheader-1">{{skill.level}}</p>
       <div class="further-info">
-        <ul>
-          {{#each data as |keywords|}}
-            <li>{{keywords}}</li>
+        <ul class="inline-list">
+          {{#each skill.keywords as |keyword|}}
+            <li>{{keyword}}</li>
           {{/each}}
         </ul>
       </div>

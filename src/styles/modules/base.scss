@@ -17,6 +17,12 @@ ul {
   list-style: none;
 }
 
+ul.inline-list {
+  li {
+    display: inline;
+  }
+}
+
 #basic {
   padding-top: 3em;
   margin-bottom: 3em;

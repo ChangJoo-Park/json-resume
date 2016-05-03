@@ -1,10 +1,12 @@
-<section class="section row">
-  <div class="col-4">
-    <h2 class="section-title">{{title}}</h2>
-  </div>
-  <div class="col-8">
-    <div class="section-body">
-      {{> @partial-block}}
+{{#if data}}
+  <section class="section row">
+    <div class="col-4">
+      <h2 class="section-title">{{title}}</h2>
     </div>
-  </div>
-</section>
+    <div class="col-8">
+      <div class="section-body">
+        {{> @partial-block}}
+      </div>
+    </div>
+  </section>
+{{/if}}

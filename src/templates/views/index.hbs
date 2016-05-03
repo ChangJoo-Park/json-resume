@@ -1,6 +1,8 @@
 {{#> layout}}
 <div class="container">
-  {{> resume/basics title="Basics" data=basics}}
+  {{#if basics}}
+    {{> resume/basics title="Basics" data=basics}}
+  {{/if}}
   {{> resume/work title="Works" data=work}}
   {{> resume/volunteer title="Volunteer" data=volunteer}}
   {{> resume/education title="Education" data=education}}
