@@ -24,7 +24,7 @@ gulp.task('js', function() {
 });
 
 // Handlebars
-var resumeDataPath = path.resolve('src/templates/resume-data.js');
+var handlebarContextPath = path.resolve('src/templates/context.js');
 gulp.task('handlebars', function() {
   var tempData = {};
   return gulp.src('./src/templates/views/**/*.hbs')
@@ -32,7 +32,7 @@ gulp.task('handlebars', function() {
       var root = path.resolve(__dirname, '../src/templates/views/');
       return { path: path.parse(path.relative(root, file.path)) };
     }))
-    .pipe(handlebars(require(resumeDataPath), { batch: './src/templates/partials' }))
+    .pipe(handlebars(require(handlebarContextPath), { batch: './src/templates/partials' }))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./dist'));
 });
