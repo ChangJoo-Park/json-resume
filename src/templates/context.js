@@ -26,7 +26,7 @@ module.exports = {
     "email": "changjoo.park.cj@gmail.com",
     "phone": "+49 015779830582",
     "website": "http://changjoo-park.github.io/",
-    "summary": "Hallo! Ich bin ChangJoo Park.",
+    "summary": "Web developer and iOS developer and with 3 years experience in both development position. I understand importance of readable and maintainable source code. I am constantly striving to learn new technology and create easy to use.",
     "location": {
       "address": "Ringslebenstr. 2",
       "postalCode": "12353",
@@ -109,8 +109,7 @@ module.exports = {
   }, ],
   "interests": [{
     "name": "Football",
-  },
-  {
+  }, {
     "name": "Traveling",
   }],
 }
