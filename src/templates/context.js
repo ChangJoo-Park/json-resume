@@ -1,5 +1,6 @@
 var Handlebars = require('handlebars');
-var ResumeJSON = require('./resume.json');
+var ResumeJSON = require('../data/resume.json');
+
 // Helpers
 Handlebars.registerHelper("lowercase", function(sourceString) {
   if (sourceString === undefined || sourceString === null) {
@@ -16,7 +17,6 @@ Handlebars.registerHelper("socialIcon", function(sourceString) {
   var markup = new Handlebars.SafeString(icon);
   return markup;
 });
-
 
 module.exports = {
   resume: ResumeJSON
