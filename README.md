@@ -83,7 +83,7 @@ See in `./src/templates`. You will see views and partials.
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## Thanks to.
+## Thanks to
 - [Avuba](https://avuba.de/) : Thank you for give me a chance to make this project.
 - [JSONResume](https://jsonresume.org/schema/) : It is nice json schema for resume
 - [Awesome Gulp](http://alferov.github.io/awesome-gulp) : Thank you for recommend good resources
