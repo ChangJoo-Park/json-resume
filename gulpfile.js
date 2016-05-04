@@ -12,20 +12,20 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
 var del = require('del');
+var eslint = require('gulp-eslint');
+var gulpSequence = require('gulp-sequence');
 
 // Sass
 gulp.task('sass', function() {
   return gulp.src('./src/styles/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./build'));
 });
 // JS
 gulp.task('js', function() {
   return gulp.src('./src/js/**/*.js')
-    .pipe(uglify())
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./build'));
 });
 
 // Handlebars
@@ -38,10 +38,35 @@ gulp.task('handlebars', function() {
       return { path: path.parse(path.relative(root, file.path)) };
     }))
     .pipe(handlebars(require(handlebarContextPath), { batch: './src/templates/partials' }))
-    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(rename({ extname: '.html' }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./build'));
 });
+
+// Build
+gulp.task('build', ['sass', 'js', 'handlebars']);
+
+// Minify
+gulp.task('css-minify', function() {
+  return gulp.src('./build/style.css')
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(rename({ basename: 'style' }))
+    .pipe(gulp.dest('./build/min'));
+});
+
+gulp.task('js-minify', function() {
+  return gulp.src('./build/app.js')
+    .pipe(uglify())
+    .pipe(rename({ basename: 'app' }))
+    .pipe(gulp.dest('./build/min'));
+});
+
+gulp.task('hbs-minify', function() {
+  return gulp.src('./build/index.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./build/min'));
+});
+
+gulp.task('minify', ['css-minify', 'js-minify', 'hbs-minify']);
 
 // Watches
 var handlebarPaths = './src/templates/**/*.hbs'
@@ -52,9 +77,25 @@ gulp.task('watch', function() {
   gulp.watch(handlebarPaths, tasks);
 });
 
+//Lint
+gulp.task('lint', function() {
+  return gulp.src(['**/*.js', '!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
 // Delete dist
-gulp.task('clean', function(){
-  return del(['./dist/css/*', './dist/js*', './dist/*.html', './dist']);
+gulp.task('clean', function() {
+  return del(['./dist/css/*', './dist/js*', './dist/*.html', './dist',
+    './build/*', './build'
+  ]);
+});
+
+// Move build to dist
+gulp.task('dist', function() {
+  return gulp.src(['./build/min/app.js', './build/min/style.css', './build/min/index.html'])
+    .pipe(gulp.dest('./dist'));
 });
 
 // Connect to Server
@@ -65,8 +106,8 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('default', ['clean', 'sass', 'js', 'handlebars', 'connect', 'watch'], function(){
-  setTimeout(function(){
-    console.log("Hi!");
-  }, 3000);
-});
+gulp.task('sayHi', function(){
+  setTimeout(function(){ console.log("I want to talk about this :)") }, 3000);
+})
+
+gulp.task('default', gulpSequence('clean', 'build', 'minify', 'dist', 'connect', 'watch', 'sayHi'));
