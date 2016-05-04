@@ -14,103 +14,87 @@
       "countryCode": "DE",
       "region": "Berlin"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "pcjpcj2",
-        "url": "http://twitter.com/pcjpcj2"
-      },
-      {
-        "network": "Github",
-        "username": "changjoo-park",
-        "url": "github.com/changjoo-park"
-      }
-    ]
+    "profiles": [{
+      "network": "Twitter",
+      "username": "pcjpcj2",
+      "url": "http://twitter.com/pcjpcj2"
+    }, {
+      "network": "Github",
+      "username": "changjoo-park",
+      "url": "github.com/changjoo-park"
+    }]
   },
-  "work": [
-    {
-      "company": "Independent Development",
-      "position": "iOS Developer",
-      "website": "http://grackerapp.github.io/",
-      "startDate": "2015-12",
-      "endDate": "2016-04",
-      "summary": "iOS development. using Swift, Apple Map, Local Search, i18n support, Youtube API"
-    },
-    {
-      "company": "Alticast",
-      "position": "Java frontend developer",
-      "startDate": "2014-04",
-      "endDate": "2015-04",
-      "summary": "Build a TV Guide and VOD player."
-    },
-    {
-      "company": "Devguru",
-      "position": "Wordpress developer",
-      "website": "http://devguru.co.kr",
-      "startDate": "2013-05",
-      "endDate": "2014-03",
-      "summary": "Create company and product website. make plugins"
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Realm for React-Native",
-      "position": "Volunteer translator",
-      "website": "https://realm.io/kr/docs/react-native/latest/",
-      "startDate": "2016-03",
-      "endDate": "2016-04",
-      "summary": "Translate getting start document English to Korean. Realm mobile database for React Native"
-    }
-  ],
-  "education": [
-    {
-      "institution": "SeoulTech University (Seoul, Korea)",
-      "area": "Computer Science and Engineering",
-      "gpa": "3.5",
-      "studyType": "Bachelor",
-      "startDate": "2008-03-02",
-      "endDate": "2014-02-01"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Frontend Web development",
-      "level": "Intermediate",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Ember.js"
-      ]
-    },
-    {
-      "name": "Back Web development",
-      "level": "Intermediate",
-      "keywords": [
-        "Ruby on Rails"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "name": "English",
-      "level": "Intermediate"
-    },
-    {
-      "name": "Korean",
-      "level": "Native Speaker"
-    },
-    {
-      "name": "German",
-      "level": "Beginner"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Football"
-    },
-    {
-      "name": "Traveling"
-    }
-  ]
+  "work": [{
+    "company": "Independent Development",
+    "position": "iOS Developer",
+    "website": "http://grackerapp.github.io/",
+    "startDate": "2015-12",
+    "endDate": "2016-04",
+    "summary": "iOS development. Swift, Apple Map, i18n support, Youtube API, Realm Database"
+  }, {
+    "company": "Alticast",
+    "position": "Java frontend developer",
+    "startDate": "2014-04",
+    "endDate": "2015-04",
+    "summary": "Build a TV Guide and VOD player. using AWT, Java TV"
+  }, {
+    "company": "Devguru",
+    "position": "Wordpress developer",
+    "website": "http://devguru.co.kr",
+    "startDate": "2013-05",
+    "endDate": "2014-03",
+    "summary": "Create company and product website. make plugins"
+  }],
+  "volunteer": [{
+    "organization": "Realm for React-Native",
+    "position": "Volunteer translator",
+    "website": "https://realm.io/kr/docs/react-native/latest/",
+    "startDate": "2016-03",
+    "endDate": "2016-04",
+    "summary": "Translate getting start document English to Korean. Realm mobile database for React Native"
+  },{
+    "organization": "Ruby on Rails guides",
+    "position": "Volunteer translator",
+    "startDate": "2014",
+    "summary": "Translate English to Korean. The Rails Command Line"
+    }],
+  "education": [{
+    "institution": "SeoulTech University (Seoul, Korea)",
+    "area": "Computer Science and Engineering",
+    "studyType": "Bachelor",
+    "startDate": "2008-03",
+    "endDate": "2014-02"
+  }],
+  "skills": [{
+    "name": "Frontend Web development",
+    "level": "Intermediate",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Ember.js"
+    ]
+  }, {
+    "name": "Back Web development",
+    "level": "Intermediate",
+    "keywords": [
+      "Ruby on Rails", "Meteor.js"
+    ]
+  }],
+  "languages": [{
+    "name": "Korean",
+    "level": "Native Speaker"
+  }, {
+    "name": "English",
+    "level": "Intermediate"
+  }, {
+    "name": "German",
+    "level": "Beginner"
+  }],
+  "interests": [{
+    "name": "Football"
+
+  }, {
+    "name": "Traveling"
+  }]
 }
