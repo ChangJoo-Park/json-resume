@@ -49,7 +49,6 @@ openModalButton.click(function(event) {
     message: self.data('message')
   });
 });
-
 ```
 
 **How to Close?**
