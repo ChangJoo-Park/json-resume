@@ -6,9 +6,9 @@
       </header>
       <p class="subheader-1">{{volunteer.position}}, <span class="date">{{volunteer.startDate}} -{{volunteer.endDate}}</span></p>
       <p class="subheader-2"><a href="{{volunteer.website}}" target="_blank">{{volunteer.website}}</a></p>
-      <div class="summary">
-        {{volunteer.summary}}
-      </div>
+      <button class="btn btn-link openModal" data-title="{{volunteer.organization}}" data-message="{{volunteer.summary}}">
+        Show Detail
+      </button>
       <div class="further-info">
         <ul>
         {{#each volunteer.highlights as |highlight|}}
