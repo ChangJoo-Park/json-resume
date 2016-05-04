@@ -2,9 +2,8 @@ var modal = (function(){
   var body = $("body");
   var backdrop = $(".modal-backdrop");
   var modalContainer = $(".modal-container");
-
-  return {
-    open: function(data) {
+  var modalCloseButton = modalContainer.find("button.close");
+  var open = function(data) {
       var title = data.title;
       var message = data.message;
       backdrop.show().addClass('active');
@@ -12,11 +11,22 @@ var modal = (function(){
       modalContainer.find(".modal-title").text(data.title);
       modalContainer.find(".modal-message").text(data.message);
       body.addClass('modal-open');
-    },
-    close: function() {
+  };
+
+  var close = function() {
       modalContainer.removeClass('active');
       backdrop.removeClass('active').css('display', 'none');
       body.removeClass('modal-open');
-    }
+  };
+
+  backdrop.click(function(event) {
+    close();
+  });
+  modalCloseButton.click(function(event){
+    modal.close();
+  });
+  return {
+    open: open,
+    close: close
   };
 }());
