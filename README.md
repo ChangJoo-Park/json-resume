@@ -33,10 +33,10 @@ git clone https://github.com/ChangJoo-Park/json-resume && cd json-resume && npm 
 
 ## Usage
 ### Using Modal
-If you need to use modal some situations, add button and add class to your trigger button 
+If you need to use modal some situations, add button and add role to your trigger button 
 
 ```html
-<button class="openModal" data-title="Your Title" data-message="message what you want to show">Button Name</button>
+<button date-role="openModal" data-title="Your Title" data-message="message what you want to show">Button Name</button>
 ```
 
 **How to Close?**
