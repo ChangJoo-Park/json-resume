@@ -5,7 +5,10 @@
         <h3>{{publication.name}}</h3>
       </header>
       <p class="subheader-1">{{publication.publisher}}, <span class="date">{{publication.releaseDate}}</span></p>
-      <p class="subheader-2"><a href="{{publication.website}}" target="_blank">{{publication.website}}</a></p>
+      {{#if publication.website}}
+        <p class="subheader-2"><a href="{{publication.website}}" target="_blank">{{publication.website}}</a></p>
+      {{/if}}
+
       <div class="summary">
         {{publication.summary}}
       </div>

@@ -5,7 +5,9 @@
         <h3>{{work.company}}</h3>
       </header>
       <p class="subheader-1"> {{work.position}}, <span class="date">{{work.startDate}} - {{work.endDate}}</span></p>
-      <p class="subheader-2"><a href={{work.website}} target="_blank">{{work.website}}</a></p>
+      {{#if work.website}}
+        <p class="subheader-2"><a href={{work.website}} target="_blank">{{work.website}}</a></p>
+      {{/if}}
       <button class="btn btn-link openModal" data-title="{{work.company}}" data-message="{{work.summary}}">Show Detail</button>
       <div class="further-info">
         <ul>

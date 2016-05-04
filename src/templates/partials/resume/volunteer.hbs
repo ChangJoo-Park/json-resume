@@ -5,7 +5,10 @@
         <h3>{{volunteer.organization}}</h3>
       </header>
       <p class="subheader-1">{{volunteer.position}}, <span class="date">{{volunteer.startDate}} -{{volunteer.endDate}}</span></p>
-      <p class="subheader-2"><a href="{{volunteer.website}}" target="_blank">{{volunteer.website}}</a></p>
+      {{#if volunteer.website}}
+        <p class="subheader-2"><a href="{{volunteer.website}}" target="_blank">{{volunteer.website}}</a></p>
+      {{/if}}
+
       <button class="btn btn-link openModal" data-title="{{volunteer.organization}}" data-message="{{volunteer.summary}}">
         Show Detail
       </button>
