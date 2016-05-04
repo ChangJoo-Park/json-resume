@@ -2,7 +2,6 @@ var modal = (function(){
   var body = $("body");
   var backdrop = $(".modal-backdrop");
   var modalContainer = $(".modal-container");
-  var modalCloseButton = modalContainer.find("button.close");
 
   return {
     open: function(data) {
@@ -12,7 +11,6 @@ var modal = (function(){
       modalContainer.addClass('active');
       modalContainer.find(".modal-title").text(data.title);
       modalContainer.find(".modal-message").text(data.message);
-      modalCloseButton.focus();
       body.addClass('modal-open');
     },
     close: function() {

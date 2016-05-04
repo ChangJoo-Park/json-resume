@@ -23,6 +23,16 @@ ul.inline-list {
   }
 }
 
+button.btn {
+  background-color: transparent;
+}
+
+button.btn.btn-link {
+  &:hover {
+    border-bottom: 1px solid black;
+  }
+}
+
 #basic {
   padding-top: 3em;
   margin-bottom: 3em;

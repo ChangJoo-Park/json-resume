@@ -1,16 +1,16 @@
 {{#> layout}}
 <div class="container">
-  {{#if basics}}
-    {{> resume/basics title="Basics" data=basics}}
+  {{#if resume.basics}}
+    {{> resume/basics title="Basics" data=resume.basics}}
   {{/if}}
-  {{> resume/work title="Works" data=work}}
-  {{> resume/volunteer title="Volunteer" data=volunteer}}
-  {{> resume/education title="Education" data=education}}
-  {{> resume/award title="Award" data=awards}}
-  {{> resume/publications title="Publications" data=publications}}
-  {{> resume/skills title="Skills" data=skills}}
-  {{> resume/languages title="Languages" data=languages}}
-  {{> resume/interests title="Interests" data=interests}}
-  {{> resume/references title="References" data=references}}
+  {{> resume/work title="Works" data=resume.work}}
+  {{> resume/volunteer title="Volunteer" data=resume.volunteer}}
+  {{> resume/education title="Education" data=resume.education}}
+  {{> resume/award title="Award" data=resume.awards}}
+  {{> resume/publications title="Publications" data=resume.publications}}
+  {{> resume/skills title="Skills" data=resume.skills}}
+  {{> resume/languages title="Languages" data=resume.languages}}
+  {{> resume/interests title="Interests" data=resume.interests}}
+  {{> resume/references title="References" data=resume.references}}
 </div>
 {{/layout}}

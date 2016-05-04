@@ -99,6 +99,7 @@ body.modal-open {
   }
 
   button.close:active  {
+    box-shadow: none;
     background-color: $orange;
     border: 1px solid #ffffff;
     color: #ffffff;
