@@ -6,8 +6,11 @@ All assets are built, minified from server side. Only need to deploy in `dist`
 ### Simple Version
 just copy and paste in your terminal. you must need `node.js`.
 ```terminal
-git clone https://github.com/ChangJoo-Park/json-resume && cd json-resume && npm install && gulp && open http://localhost:8888
+git clone https://github.com/ChangJoo-Park/json-resume && cd json-resume && npm install && gulp
 ```
+
+open your favorite browser, typed http://localhost:8888
+
 ### Details
 **Dependencies**
 - Base : node.js `v5.10.1` (latest version is `v6.0.0`)
