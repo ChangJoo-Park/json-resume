@@ -53,3 +53,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 479px) {
+  .section {
+    .section-title {
+      margin-bottom: 1em;
+      padding: 0;
+    }
+  }
+}

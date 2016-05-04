@@ -1,7 +1,21 @@
-$background-color: $light-gray;
-$section-title-color: $black;
-$section-body-color: $light-black;
-$link-color: $orange;
-$section-item-date-color: $more-light-black;
+// Fonts
 $default-font-family: 'Roboto', 'sans-serif';
 $default-font-size: 20px;
+
+
+$background-color: $light-gray;
+
+// Sections
+$section-title-color: $black;
+$section-body-color: $light-black;
+$section-item-date-color: $more-light-black;
+
+$link-color: $orange;
+
+
+// Buttons
+$button-background-default-color: $black;
+$button-background-primary-color: $orange;
+$button-text-default-color: $black;
+$button-text-primary-color: $orange;
+
