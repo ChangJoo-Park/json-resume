@@ -8,6 +8,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
+var connect = require('gulp-connect');
+var del = require('del');
 
 // Sass
 gulp.task('sass', function() {
@@ -37,16 +39,30 @@ gulp.task('handlebars', function() {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['sass', 'js', 'handlebars', 'watch']);
-
-
 // Watches
-var handlebarPaths = './src/templates/views/**/*.hbs'
-  .concat('src/templates/partials/**/*.hbs',
-    'src/templates/context.js');
+var handlebarPaths = './src/templates/**/*.hbs'
 gulp.task('watch', function() {
   var tasks = ['sass', 'js', 'handlebars'];
   gulp.watch('./src/styles/**/*.scss', tasks);
   gulp.watch('./src/js/**/*.js', tasks);
   gulp.watch(handlebarPaths, tasks);
+});
+
+// Delete dist
+gulp.task('clean', function(){
+  return del(['./dist/css/*', './dist/js*', './dist/*.html', './dist']);
+});
+
+// Connect to Server
+gulp.task('connect', function() {
+  connect.server({
+    root: 'dist',
+    port: 8888,
+  });
+});
+
+gulp.task('default', ['clean', 'sass', 'js', 'handlebars', 'connect', 'watch'], function(){
+  setTimeout(function(){
+    console.log("Hi!");
+  }, 3000);
 });
