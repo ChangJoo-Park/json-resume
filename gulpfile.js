@@ -4,8 +4,10 @@ var path = require('path');
 var gulp = require('gulp');
 var data = require('gulp-data');
 var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var connect = require('gulp-connect');
@@ -15,6 +17,7 @@ var del = require('del');
 gulp.task('sass', function() {
   return gulp.src('./src/styles/style.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./dist/css'));
 });
 // JS
@@ -35,6 +38,7 @@ gulp.task('handlebars', function() {
       return { path: path.parse(path.relative(root, file.path)) };
     }))
     .pipe(handlebars(require(handlebarContextPath), { batch: './src/templates/partials' }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./dist'));
 });
