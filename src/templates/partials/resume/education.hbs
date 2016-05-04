@@ -5,7 +5,9 @@
         <h3>{{education.institution}}</h3>
       </header>
       <p class="subheader-1">{{education.studyType}} - {{education.area}}, <span class="date">{{education.startDate}} - {{education.endDate}}</span></p>
-      <p class="subheader-2">GPA: {{education.gpa}}</p>
+      {{#if education.gpa}}
+        <p class="subheader-2">GPA: {{education.gpa}}</p>
+      {{/if}}
       <div class="further-info">
         <ul>
           {{#each education.courses as |course|}}
