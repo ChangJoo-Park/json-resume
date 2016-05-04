@@ -9,7 +9,7 @@ just copy and paste in your terminal. you must need `node.js`.
 git clone https://github.com/ChangJoo-Park/json-resume && cd json-resume && npm install && gulp
 ```
 
-open your favorite browser, typed http://localhost:8888
+open your favorite browser, typed **http://localhost:8888**
 
 ### Details
 **Dependencies**
