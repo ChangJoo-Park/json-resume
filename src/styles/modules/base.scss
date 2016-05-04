@@ -28,9 +28,7 @@ button.btn {
 }
 
 button.btn.btn-link {
-  &:hover {
-    border-bottom: 1px solid black;
-  }
+  text-decoration: underline;
 }
 
 #basic {
