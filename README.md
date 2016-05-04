@@ -33,13 +33,27 @@ git clone https://github.com/ChangJoo-Park/json-resume && cd json-resume && npm 
 
 ## Usage
 ### Using Modal
-If you need to use modal some situations, add button and add class to your trigger button 
+If you need to use modal some situations, add button and add role to your trigger button 
 
 ```html
-<button class="openModal" data-title="Your Title" data-message="message what you want to show">Button Name</button>
+<button date-role="openModal" data-title="Your Title" data-message="message what you want to show">Button Name</button>
+```
+
+```js
+// Use where you want
+var openModalButton = $("button[data-role='openModal']");
+openModalButton.click(function(event) {
+  var self = $(this);
+  modal.open({
+    title: self.data('title'),
+    message: self.data('message')
+  });
+});
+
 ```
 
 **How to Close?**
+
 It just click backdrop or close button!
 
 ### Change JSON Data
